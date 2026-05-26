@@ -3,33 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home DashBoard - BootStrap</title>
+  <title>Home Dashboard - Bootstrap</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
     body{
-      background:#0b1d3a;
-      color:white;
+      background:#f4f6f9;
+      color:#222;
+      font-family:Arial, sans-serif;
+    }
+
+    .navbar{
+      background:#0d6efd !important;
     }
 
     .card{
-      background:#13294b;
+      background:white;
       border:none;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
     }
 
     .btn-custom{
-      background:#ffc107;
-      color:black;
+      background:#0d6efd;
+      color:white;
       font-weight:bold;
+    }
+
+    .btn-custom:hover{
+      background:#0b5ed7;
+      color:white;
+    }
+
+    .modal-content{
+      border-radius:15px;
     }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+<nav class="navbar navbar-expand-lg navbar-dark px-3">
   <a class="navbar-brand" href="#">Personal Dashboard</a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -38,7 +54,7 @@
 
   <div class="collapse navbar-collapse" id="menu">
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="#">About</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
     </ul>
@@ -50,7 +66,7 @@
 
   <!-- Card -->
   <div class="card p-4 text-center">
-    <h2> Personal Interactive Dashboard Bootstrap</h2>
+    <h2>Personal Interactive Dashboard Bootstrap</h2>
     <p>Simple Interactive Bootstrap Activity</p>
 
     <!-- Button -->
@@ -78,7 +94,7 @@
 
           <!-- Name -->
           <div class="mb-3">
-            <label>Name</label>
+            <label class="form-label">Name</label>
             <input type="text" class="form-control" required>
             <div class="invalid-feedback">
               Please enter your name.
@@ -87,7 +103,7 @@
 
           <!-- Email -->
           <div class="mb-3">
-            <label>Email</label>
+            <label class="form-label">Email</label>
             <input type="email" class="form-control" required>
             <div class="invalid-feedback">
               Enter a valid email.
@@ -96,7 +112,7 @@
 
           <!-- Message -->
           <div class="mb-3">
-            <label>Message</label>
+            <label class="form-label">Message</label>
             <textarea class="form-control" minlength="20" required></textarea>
             <div class="invalid-feedback">
               Message must be at least 20 characters long.
